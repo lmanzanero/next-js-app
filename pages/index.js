@@ -1,65 +1,147 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import  BellIcon from '../public/icons/bell.svg';
+import  MessengerIcon from '../public/icons/messenger.svg';
+import  CaretIcon from '../public/icons/caret.svg';
+import  PlusIcon from '../public/icons/plus.svg';
+import  CogIcon  from '../public/icons/cog.svg';
+import  ChevronIcon from '../public/icons/chevron.svg';
+import  ArrowIcon  from '../public/icons/arrow.svg';
+import  BoltIcon  from '../public/icons/bolt.svg';
+import React, { useState, useEffect, useRef } from 'react';
+import { CSSTransition } from 'react-transition-group';
+import Footer from '../components/Footer';
 
-export default function Home() {
+function App() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Start of something great!</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <>
+    <Navbar> 
+      <NavItem icon={PlusIcon} />
+      <NavItem icon={BellIcon} />
+      <NavItem icon={MessengerIcon} />
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">New EcoCrypt</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+      <NavItem icon={CaretIcon}>
+        <DropdownMenu></DropdownMenu>
+      </NavItem>
+    </Navbar>
+    <Footer/>
+    </>
+  );
 }
+
+function Navbar(props) {
+  return (
+    <nav className="navbar"> 
+      <ul className="navbar-nav-left">
+        <li><a href="#">EcoCrypt 🐸 </a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Community</a></li>
+        <li><a href="#">News</a></li>
+      </ul>
+      <ul className="navbar-nav">{props.children}</ul>
+    </nav>
+  );
+}
+
+function NavItem(props) {
+  const [open, setOpen] = useState(false);
+  console.log(props);
+  return (
+    <li className="nav-item">
+      <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
+        {/* {props.icon}   */}
+        <img src= {props.icon}  />
+      </a>
+
+      {open && props.children}
+    </li>
+  );
+}
+
+function DropdownMenu() {
+  const [activeMenu, setActiveMenu] = useState('main');
+  const [menuHeight, setMenuHeight] = useState(null);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    setMenuHeight(dropdownRef.current?.firstChild.offsetHeight)
+  }, [])
+
+  function calcHeight(el) {
+    const height = el.offsetHeight;
+    setMenuHeight(height);
+  }
+
+  function DropdownItem(props) {
+    return (
+      <a href="#" className="menu-item" onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
+        <span className="icon-button"><img src={props.leftIcon}/></span>
+        {props.children}
+        <span className="icon-right"><img src={props.rightIcon}/></span>
+      </a>
+    );
+  }
+
+  return (
+    <div className="dropdown" style={{ height: menuHeight }} ref={dropdownRef}>
+
+      <CSSTransition
+        in={activeMenu === 'main'}
+        timeout={500}
+        classNames="menu-primary"
+        unmountOnExit
+        onEnter={calcHeight}>
+        <div className="menu">
+          <DropdownItem>My Profile</DropdownItem>
+          <DropdownItem
+            leftIcon={CogIcon}
+            rightIcon={ChevronIcon}
+            goToMenu="settings">
+            Settings
+          </DropdownItem>
+          <DropdownItem
+            leftIcon={ChevronIcon}
+            rightIcon={ChevronIcon}
+            goToMenu="animals">
+            Animals
+          </DropdownItem>
+
+        </div>
+      </CSSTransition>
+
+      <CSSTransition
+        in={activeMenu === 'settings'}
+        timeout={500}
+        classNames="menu-secondary"
+        unmountOnExit
+        onEnter={calcHeight}>
+        <div className="menu">
+          <DropdownItem goToMenu="main" leftIcon={ArrowIcon}>
+            <h2>My Settings</h2>
+          </DropdownItem>
+          <DropdownItem leftIcon={BoltIcon}>HTML</DropdownItem>
+          <DropdownItem leftIcon={BoltIcon}>CSS</DropdownItem>
+          <DropdownItem leftIcon={BoltIcon}>JavaScript</DropdownItem>
+          <DropdownItem leftIcon={BoltIcon}>Awesome!</DropdownItem>
+        </div>
+      </CSSTransition>
+
+      <CSSTransition
+        in={activeMenu === 'animals'}
+        timeout={500}
+        classNames="menu-secondary"
+        unmountOnExit
+        onEnter={calcHeight}>
+        <div className="menu">
+          <DropdownItem goToMenu="main" leftIcon={ArrowIcon}>
+            <h2>Animals</h2>
+          </DropdownItem>
+          <DropdownItem leftIcon="🦘">Kangaroo</DropdownItem>
+          <DropdownItem leftIcon="🐸">Frog</DropdownItem>
+          <DropdownItem leftIcon="🦋">Horse?</DropdownItem>
+          <DropdownItem leftIcon="🦔">Hedgehog</DropdownItem>
+        </div>
+      </CSSTransition>
+    </div>
+  );
+}
+
+export default App;
