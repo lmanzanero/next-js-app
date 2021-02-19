@@ -13,13 +13,19 @@ import { CSSTransition } from 'react-transition-group';
 export default function Header () {
     return ( 
       <Navbar> 
-        <NavItem icon={PlusIcon} />
+        <NavItem name="Register"
+                  url="register"
+        />
+        <NavItem name="Login"
+                  url="login"
+        />
+        {/* <NavItem icon={PlusIcon} />
         <NavItem icon={BellIcon} />
         <NavItem icon={MessengerIcon} />
 
         <NavItem icon={CaretIcon}>
           <DropdownMenu></DropdownMenu>
-        </NavItem>
+        </NavItem> */}
      </Navbar>  
     );
 }
@@ -27,8 +33,10 @@ export default function Header () {
 function Navbar(props) {
   return (
     <nav className="navbar"> 
-      <ul className="navbar-nav-left">
-        <li><Link href="/">EcoCrypt 🐸 </Link></li>
+      <div className="nav-logo"> 
+      <img style={{marginLeft: '5em', padding: '0.4em', width: 60}} src="/icons/ecocrypt-logo.png"/> 
+      </div>
+      <ul className="navbar-nav-left"> 
         <li><Link href="/explore">Explore</Link></li>
         <li><Link href="/community">Community</Link></li>
         <li><Link href="/news">News</Link></li>
@@ -45,13 +53,13 @@ function Navbar(props) {
 
 function NavItem(props) {
   const [open, setOpen] = useState(false);
-  console.log(props);
   return (
     <li className="nav-item">
-      <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
+      <Link href={{pathname: `/${props.url}`}} className="icon-button" onClick={() => setOpen(!open)}>
         {/* {props.icon}   */}
-        <img src= {props.icon}  />
-      </a>
+        {/* <img src= {props.icon}  />  */}
+        {props.name}
+      </Link>
 
       {open && props.children}
     </li>
