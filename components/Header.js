@@ -30,10 +30,15 @@ function Navbar(props) {
       <ul className="navbar-nav-left">
         <li><Link href="/">EcoCrypt 🐸 </Link></li>
         <li><Link href="/explore">Explore</Link></li>
-        <li><Link href="community">Community</Link></li>
+        <li><Link href="/community">Community</Link></li>
         <li><Link href="/news">News</Link></li>
       </ul>
-      <ul className="navbar-nav">{props.children}</ul>
+      <ul className="navbar-nav-right"> 
+        <li><Link href="/login">Login</Link></li>
+        <li><Link href="/register">Sign up</Link></li>
+      </ul>
+      {/* If Authenticated, show this one */}
+      {/* <ul className="navbar-nav">{props.children}</ul> */}
     </nav>
   );
 }
@@ -94,12 +99,12 @@ function DropdownMenu() {
             goToMenu="settings">
             Settings
           </DropdownItem>
-          <DropdownItem
+          {/* <DropdownItem
             leftIcon={ChevronIcon}
             rightIcon={ChevronIcon}
             goToMenu="animals">
             Animals
-          </DropdownItem>
+          </DropdownItem> */}
 
         </div>
       </CSSTransition>
@@ -114,10 +119,10 @@ function DropdownMenu() {
           <DropdownItem goToMenu="main" leftIcon={ArrowIcon}>
             <h2>My Settings</h2>
           </DropdownItem>
-          <DropdownItem leftIcon={BoltIcon}>HTML</DropdownItem>
-          <DropdownItem leftIcon={BoltIcon}>CSS</DropdownItem>
-          <DropdownItem leftIcon={BoltIcon}>JavaScript</DropdownItem>
-          <DropdownItem leftIcon={BoltIcon}>Awesome!</DropdownItem>
+          <DropdownItem leftIcon={BoltIcon}>Account Details</DropdownItem>
+          <DropdownItem leftIcon={BoltIcon}>My Stats</DropdownItem>
+          {/* <DropdownItem leftIcon={BoltIcon}>JavaScript</DropdownItem>
+          <DropdownItem leftIcon={BoltIcon}>Awesome!</DropdownItem>  */}
         </div>
       </CSSTransition>
 
