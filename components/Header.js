@@ -33,9 +33,11 @@ export default function Header () {
 function Navbar(props) {
   return (
     <nav className="navbar"> 
-      <div className="nav-logo"> 
-      <img style={{marginLeft: '5em', padding: '0.4em', width: 60}} src="/icons/ecocrypt-logo.png"/> 
-      </div>
+      <Link href="/">
+        <div className="nav-logo"> 
+          <img style={{marginLeft: '5em', padding: '0.4em', width: 60}} src="/icons/ecocrypt-logo.png"/> 
+        </div>
+      </Link>
       <ul className="navbar-nav-left"> 
         <li><Link href="/explore">Explore</Link></li>
         <li><Link href="/community">Community</Link></li>

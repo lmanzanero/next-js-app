@@ -66,6 +66,7 @@ a {
 .navbar-nav-right li {
   padding: 1.2em;
   margin: auto 0.5em;
+  white-space: nowrap;
 }
 
 
