@@ -30,7 +30,16 @@ ul {
 
 a {
   color: var(--text-color);
+  font-weight: 500;
   text-decoration: none;;
+  transition: all 0.5s;
+}
+
+a:hover{
+  color: var(--bg-accent);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.5s;
 }
 
 /* Top Navigation Bar */
@@ -233,7 +242,7 @@ a {
   justify-content: space-between;
 }
 
-.hero-section-1 button {
+ button {
   position: relative; 
   display: block;
   margin: 30px auto;
@@ -248,19 +257,19 @@ a {
   transition: background-color .3s;
 }
 
-.hero-section-1 button:hover, button:focus {
+ button:hover, button:focus {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   background-color: var(--bg-accent);
   transition: all 0.5s;
 }
 
 
-.hero-section button span {
+ button span {
   display: block;
   padding: 12px 24px;
 }
 
-.hero-section button:before {
+ button:before {
   content: ""; 
   position: absolute;
   top: 50%;
@@ -278,7 +287,7 @@ a {
   transform: translate(-50%, -50%);
 }
 
-.hero-section button:active:before { 
+ button:active:before { 
   width: 120%;
   padding-top: 120%; 
   transition: width .2s ease-out, padding-top .2s ease-out;
@@ -384,7 +393,7 @@ a {
   color: var(--text-color);
   text-align: left;
   justify-content: center;
-  align-items: center; 
+  align-items: center;  
   margin: auto 2em;
 }
 
@@ -393,12 +402,17 @@ a {
   grid-template-columns: 1fr 1fr;
 }
 
+.app-promo-section .promo-details .desc {
+  line-height: 1.5em; 
+}
+
 .app-promo-section .platforms .platform { 
   width: 150px;  
   height: 50px;  
   background-size: cover;  
   overflow: hidden;
   border-radius: 1em;
+  margin-top: 0.5em;
 }
 
 .app-promo-section .platforms .platform img {  
@@ -434,6 +448,19 @@ a {
   text-align: center;
 }
 
+.highlights-section {
+  margin: 1em;
+}
+
+.highlights-section .articles { 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.highlights-section .articles .article { 
+  text-align: left;
+  padding: 1em;
+}
 
 /* FORM TYPOGRAPHY*/
 
