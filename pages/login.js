@@ -9,7 +9,18 @@ export default function Login() {
           <title>Login - Ecocrypt.org </title> 
         </Head>
       <div className="page">
-        <h1>Login</h1>
+        <div className="auth-section">
+          <h1 className="title">Login</h1>
+          <div className="desc">Login and start contributing!</div>
+          <form>
+              <input type="text" id="login" class="fadeIn second" name="login" placeholder="Username"/>
+              <input type="text" id="password" class="fadeIn third" name="login" placeholder="password"/>
+              <input type="submit" class="fadeIn fourth" value="Log in" />
+          </form>
+          <div id="formFooter">
+              <a class="underlineHover" href="#">Forgot Password?</a>
+          </div>
+        </div>
       </div>
     </Layout>
   );
