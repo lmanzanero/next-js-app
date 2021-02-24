@@ -14,7 +14,10 @@ export default function Register() {
           <div className="desc">Create your Ecocrypt account and start contributing!</div>
           <form>
               <input type="text" id="login" class="fadeIn second" name="login" placeholder="Username"/>
+              <input type="text" id="login" class="fadeIn second" name="login" placeholder="Email"/>
+              <div className="desc">Confirm password</div>
               <input type="text" id="password" class="fadeIn third" name="login" placeholder="password"/>
+              <input type="text" id="password" class="fadeIn third" name="login" placeholder="password confirmation"/>
               <input type="submit" class="fadeIn fourth" value="Log in" />
           </form>
           <div id="formFooter">
