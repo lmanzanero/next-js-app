@@ -367,9 +367,11 @@ a:hover{
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+ 
+
 .work-flow-section .steps .icon {
-  width: 12em;
-  height: 12em;
+  max-width: 12em;
+  max-height: 12em;
   padding: 1em;
   margin: auto;
   border-radius: 50%;
@@ -435,7 +437,7 @@ a:hover{
 }
 
 .app-promo-section .app-screens .screen {
-  width: 250px; 
+  max-width: 250px;
   margin: 1em;
 }
 
@@ -466,8 +468,10 @@ a:hover{
 
 .highlights-section .articles .article { 
   text-align: left;
+  min-width: 200px; 
   padding: 1em;
   margin: 1em;
+  border-radius: 0.5em;
   box-shadow: 0 10px 30px 0 rgba(100, 103, 105, 0.1);
   transition: all 0.5s;
 }
@@ -477,6 +481,11 @@ a:hover{
   text-align: left;
   padding: 1em;
   transition: all 0.5s;
+} 
+
+.highlights-section .articles .article img {
+  width: 100%;
+  object-fit: cover;
 }
 
 
@@ -667,10 +676,82 @@ a:hover{
   color: var(--bg-accent);
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .work-flow-section .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .features-section .section-row {
+    flex-wrap: wrap;
+  }
+
+  .highlights-section .articles {
+    grid-template-columns: 1fr;
+  }
+
+  .app-promo-section {
+    grid-template-columns: 1fr;
+  }
+
+  .app-promo-section .app-screens {  
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: row;
+    overflow: auto;
+    scroll-direction: horizontal;
+  }
+  
+  .app-promo-section .app-screens .screen:first-child {
+    margin-left: 4em;
+  }
+
+  .app-promo-section .app-screens .screen {
+    width: 200px; 
+    margin: 1.5em 0.5em;
+  }
+
+  .navbar li {
+    display: none;
+  }
+
+
+  .hero-section {  
+    height:65vh;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-section .hero-section-1 {
+    background-image: url("https://wallpapercave.com/wp/hxU3cUn.jpg");
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center; 
+    color: var(--bg-accent);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: whitesmoke;
+    background-color: burlywood;
+  }
+
+  .hero-section .hero-section-2 {
+    display: none;
+  }
+
+  .hero-section .buttons {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 24.375em) {
   .legal .legal__links {
     margin-left: auto;
-  }
+  } 
 }
 
 @media screen and (min-width: 40.375em) {
