@@ -18,7 +18,7 @@ export default function Login() {
               <input type="submit" class="fadeIn fourth" value="Log in" />
           </form>
           <div id="formFooter">
-              <a class="underlineHover" href="#">Forgot Password?</a>
+              <a className="underlineHover" href="#">Forgot Password?</a>
           </div>
         </div>
       </div>

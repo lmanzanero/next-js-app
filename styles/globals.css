@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0; 
@@ -41,6 +42,33 @@ a:hover{
   text-decoration: none;
   transition: all 0.5s;
 }
+
+/* React Tabs */
+
+.react-tabs { 
+  text-align: center; 
+}
+
+.react-tabs ul { 
+  color: var(--text-color); 
+  border: none;
+}
+
+.react-tabs ul li {
+  height: 2em;
+  margin: auto 2em;
+  border: none; 
+  color: var(--bg); 
+  justify-content: center; 
+}
+
+.react-tabs__tab--selected {
+  color: var(--bg-accent) !important;
+  font-weight: 600;
+  border-bottom: #466075 1px solid; 
+}
+
+
 
 /* Top Navigation Bar */
 
@@ -202,7 +230,7 @@ a:hover{
 }
 
 .page {
-  height: 80vh;  
+  min-height: 80vh;  
 }
 
 .page .title {
@@ -215,6 +243,43 @@ a:hover{
   padding: 0.5em;
   font-style: italic;
   color:var(--text-color);
+}
+
+.page.explore {
+  padding: 2em;
+  text-align: center;
+}
+
+.page.explore .more-section {
+  display: block;
+  justify-content: center;
+}
+
+.page.explore .more-section .more-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.page.explore .more-section .more-row .content {
+  width: 250px;
+  margin: 1em;
+  border-radius: 0.5em;
+  box-shadow: 0 10px 30px 0 rgba(100, 103, 105, 0.1);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.page.explore .more-section .more-row .content:hover {
+  box-shadow: 0 10px 30px 0 rgba(100, 103, 105, 0.2);
+  transition: all 0.5s;
+}
+
+.page.explore .more-section .more-row img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
 }
 
 .hero-section {  
