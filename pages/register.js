@@ -13,15 +13,15 @@ export default function Register() {
           <h1 className="title">Register</h1>
           <div className="desc">Create your Ecocrypt account and start contributing!</div>
           <form>
-              <input type="text" id="login" class="fadeIn second" name="login" placeholder="Username"/>
-              <input type="text" id="login" class="fadeIn second" name="login" placeholder="Email"/>
+              <input type="text" id="login" className="fadeIn second" name="login" placeholder="Username"/>
+              <input type="text" id="login" className="fadeIn second" name="login" placeholder="Email"/>
               <div className="desc">Confirm password</div>
-              <input type="text" id="password" class="fadeIn third" name="login" placeholder="password"/>
-              <input type="text" id="password" class="fadeIn third" name="login" placeholder="password confirmation"/>
-              <input type="submit" class="fadeIn fourth" value="Log in" />
+              <input type="text" id="password" className="fadeIn third" name="login" placeholder="password"/>
+              <input type="text" id="password" className="fadeIn third" name="login" placeholder="password confirmation"/>
+              <input type="submit" className="fadeIn fourth" value="Log in" />
           </form>
           <div id="formFooter">
-              <a class="underlineHover" href="#">Forgot Password?</a>
+              <a className="underlineHover" href="#">Forgot Password?</a>
           </div>
         </div>
       </div>

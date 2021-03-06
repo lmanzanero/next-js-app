@@ -13,9 +13,9 @@ export default function Login() {
           <h1 className="title">Login</h1>
           <div className="desc">Login and start contributing!</div>
           <form>
-              <input type="text" id="login" class="fadeIn second" name="login" placeholder="Username"/>
-              <input type="text" id="password" class="fadeIn third" name="login" placeholder="password"/>
-              <input type="submit" class="fadeIn fourth" value="Log in" />
+              <input type="text" id="login" className="fadeIn second" name="login" placeholder="Username"/>
+              <input type="text" id="password" className="fadeIn third" name="login" placeholder="password"/>
+              <input type="submit" className="fadeIn fourth" value="Log in" />
           </form>
           <div id="formFooter">
               <a className="underlineHover" href="#">Forgot Password?</a>
