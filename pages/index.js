@@ -15,6 +15,7 @@ function App() {
        <Head>
           <title>EcoCrypt.org - A social network to enforce environmental laws</title>
           <link rel="icon" href="/icons/planet-earth.svg" type="image/png" />
+          <meta name="google-site-verification" content="kLIHlMJptobkvx6CYO5iWIzsCF3LUy2CrwthXExk9Z4" />
         </Head>
       <HeroSection/>
       <Features/>
