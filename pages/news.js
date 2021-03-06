@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
+import ArticleCard from '../components/articles/article_card';
 
 export default function News  () {
     return (
@@ -8,7 +9,9 @@ export default function News  () {
          <Head>
           <title>News - Ecocrypt.org </title> 
         </Head>
-        News
+        <div className="page news">
+          <ArticleCard/>
+        </div>
       </Layout>
     )
 }
