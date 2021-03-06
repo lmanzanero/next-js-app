@@ -14,7 +14,7 @@ export default function UserCard() {
               Environmental Scientist
             </div>
             <div class="location">
-              <i class="fas fa-map-marker-alt"></i>Gouda, the Netherlands
+              <i class="fas fa-map-marker-alt"></i>San Ignacio, Belize
             </div>
             <div class="row">
               <div class="button">

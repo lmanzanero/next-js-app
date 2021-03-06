@@ -3,7 +3,7 @@ import React from 'react'
 export default function HighlightsSection() {
   return (
     <div className="section">
-    <h1 className="title">Featured Articles</h1>
+     <h1 className="title">Featured Articles</h1>
      <div className="highlights-section">
         <div className="articles">
           <div className="article">
@@ -41,7 +41,7 @@ export default function HighlightsSection() {
           </div>
         </div>
      </div>
-     <button><span>Read More</span></button>
+     <button><span>See More</span></button>
     </div>
   )
 }

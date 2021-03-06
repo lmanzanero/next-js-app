@@ -567,6 +567,51 @@ a:hover{
   object-fit: cover;
 }
 
+.section.beta-promotion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: bisque;
+  height: 40vh; 
+}
+
+.section.beta-promotion h2 {
+  font-size: 2em;
+  color: var(--bg-accent);
+}
+
+.section.beta-promotion .desc {
+  color: var(--bg-accent);
+  font-style: italic;
+}
+
+.section .input-row { 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: auto;
+  width: 500px;   
+  max-width: 300px; 
+}
+
+.section .input-row textarea:focus, input {
+  border-radius: 0.4em; 
+  height: 35px;
+  width: 300px;
+  outline: none;
+  border: none;
+  padding-left: 0.6em; 
+  margin: auto;
+  box-shadow: 0 10px 30px 0 rgba(100, 103, 105, 0.2);
+}
+
+.section .input-row textarea:focus, input:focus{
+  outline: none;
+  border: none; 
+}
+
+
 
 /* FORM TYPOGRAPHY*/
 
@@ -636,15 +681,14 @@ a:hover{
 
 .page.news {
   position: relative;
-  margin: 1em;
-  display: flex;
-  justify-content: center; 
+  text-align: center; 
+  margin: 1em; 
 }
 
 .news .article-card {
-  box-shadow: 0 10px 30px 0 rgba(100, 103, 105, 0.1);
+  box-shadow: 0 10px 30px 0 rgba(100, 103, 105, 0.2);
   height: 200px;
-  margin: 0px;
+  margin: 0px auto;
   width: 70%;
   display: grid;
   grid-template-columns: auto auto;
@@ -655,7 +699,7 @@ a:hover{
 }
 
 .news .article-card:hover {
-  box-shadow: 0 10px 30px 0 rgba(100, 103, 105, 0.4);
+  box-shadow: 0 10px 30px 0 rgba(100, 103, 105, 0.3);
   transition: all 0.5s;
 }
 
@@ -669,6 +713,7 @@ a:hover{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  text-align: left;
   margin: 0px 1em;
 }
 
@@ -707,8 +752,8 @@ a:hover{
 }
 
 .article-card .author .profile-img {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   margin: auto 0.5em;
 }
 
@@ -857,24 +902,22 @@ a:hover{
 	padding: 1.2rem;
 	margin: 1rem 0.5rem 0;
 	box-sizing: border-box;
-	
 	background: transparent;
 	cursor: pointer;
-	
 	font-size: 1.2rem;
 	line-height: 0;
 	text-transform: upper;
 	font-weight: 500;
-	color: var(--bg);
-	
+	color: var(--bg-accent);
 	border: 2px solid lightblue;
-	border-radius: 2rem;
-	transition: background 200ms, color 200ms;
+	border-radius: 1.2rem;
+	transition:all 0.5s;
 }
 
 .button:hover {
-  background: var(--bg-accent);
-  color: var(--text-color);
+  background: var(--text-color);
+  color: var(--bg);
+  transition: all 0.5s;
 }
 
 

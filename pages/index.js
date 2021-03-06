@@ -7,6 +7,7 @@ import Features from '../ui/features_section';
 import HeroSection from '../ui/hero_section';
 import HighlightsSection from '../ui/highlights_section';
 import HowItWorksSection from '../ui/how_it_works_section';
+import BettTtesingSection from '../ui/betta_tesing_section';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <HowItWorksSection/>
       <AppPromoSection/>
       <HighlightsSection/>
+      <BettTtesingSection/>
     </Layout>
   );
 }
