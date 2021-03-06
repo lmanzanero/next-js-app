@@ -18,9 +18,9 @@ export default function HighlightsSection() {
             <button><span>Read More</span></button>
           </div>
           <div className="article">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZo_ykGExeA2yrB0PWFqI4mtEbDRsro4P8OQ&usqp=CAU" alt=""/>
+            <img src="https://lh3.googleusercontent.com/proxy/yRi9mvBHQU6Rw5pN786JPnrwx26nO-KMeyOlpQBTKFX76pCUHQy9ZVF5-AqbcgwqxJSCBgOehpQjHp8WRTfdPL8FLIQWcsEwmNrl1lis0B8ZeKu2a4WAykdNcLEBoC7fIoLqoceYjNc1rcL2gxgHj1laE7c7MI29SiNx2Ck" alt=""/>
             <h2 className="article-title">
-              Importance of the Riparian Forest
+              Mangroves with super powers!
             </h2>
             <p className="author">Author</p>
             <p className="article-exerpt">
@@ -29,9 +29,9 @@ export default function HighlightsSection() {
             <button><span>Read More</span></button>
           </div>
           <div className="article">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZo_ykGExeA2yrB0PWFqI4mtEbDRsro4P8OQ&usqp=CAU" alt=""/>
+            <img src="https://i.unu.edu/media/ourworld.unu.edu-en/article/5776/waste.jpg" alt=""/>
             <h2 className="article-title">
-              Importance of the Riparian Forest
+              The life of garbage!
             </h2>
             <p className="author">Author</p>
             <p className="article-exerpt">

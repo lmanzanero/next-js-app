@@ -6,6 +6,7 @@ export default function AppPromoSection() {
       <div className="app-promo-section">
         <div className="promo-details">
           <h2 className="title">Explore from anywhere!</h2>
+          <h4><i>Coming Soon</i></h4>
           <p className="desc">You can contribute and address to any illegal activity happening in your community. Protecting and enforcing our enviromental laws is now much easier throught our platforms!</p>
           <div className="platforms">
             <div className="platform">
