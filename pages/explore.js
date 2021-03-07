@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import Head from 'next/head';
 import { Tabs, TabList, Tab, TabPanel } from 'react-tabs';
+import Reports from '../components/explore/reports';
+import Topics from '../components/explore/topics';
+import Unresolved from '../components/explore/unresolved';
+import Contributors from '../components/explore/contributors';
 
 export default function Explore  () {
   const [tabIndex, setTabIndex] = useState(0);
@@ -19,10 +23,18 @@ export default function Explore  () {
               <Tab>Unresolved</Tab>
               <Tab>Contributors</Tab>
             </TabList>
-            <TabPanel>Report made all around the world and near you</TabPanel>
-            <TabPanel>Search related pollution content</TabPanel>
-            <TabPanel>Pollution issue which has been reported but not resolved</TabPanel>
-            <TabPanel>People who care about reporting enviornment pollution</TabPanel>
+            <TabPanel>
+              <Reports/>
+            </TabPanel>
+            <TabPanel>
+              <Topics/>
+            </TabPanel>
+            <TabPanel>
+              <Unresolved/>
+            </TabPanel>
+            <TabPanel>
+              <Contributors/>
+            </TabPanel>
           </Tabs>
           <div className="more-section">
             <h2>More ways to explore</h2>

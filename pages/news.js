@@ -12,6 +12,7 @@ export default function News  () {
         <div className="page news">
           <h1 className="title">Learn about the environment and more!</h1>
           <ArticleCard/>
+          <ArticleCard/>
         </div>
       </Layout>
     )
