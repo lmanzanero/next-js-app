@@ -55,17 +55,17 @@ a:hover{
 }
 
 .react-tabs ul li {
-  height: 2em;
-  margin: auto 2em;
-  border: none; 
+  height: 1.5em;
+  margin: 1em;
+  border: none;
   color: var(--bg); 
   justify-content: center; 
 }
 
-.react-tabs__tab--selected {
+.react-tabs .react-tabs__tab--selected {
   color: var(--bg-accent) !important;
-  font-weight: 600;
-  border-bottom: #466075 1px solid; 
+  font-weight: 600; 
+  border-bottom: #466075 1px solid;  
 }
 
 
@@ -249,8 +249,7 @@ a:hover{
 }
 
 .page .title {
-  font-weight: 700;
-  padding: 0.5em;
+  font-weight: 700; 
   color: var(--bg-accent);
 }
 
@@ -260,12 +259,12 @@ a:hover{
   color:var(--text-color);
 }
 
-.page.explore {
-  padding: 2em;
+.page.explore { 
   text-align: center;
 }
 
 .page.explore .more-section {
+  padding: 2em;
   display: block;
   justify-content: center;
 }
@@ -1049,6 +1048,42 @@ a:hover{
 
 .heart {
   color: var(--bg-accent);
+}
+
+.explore-section{
+  margin: auto 2em;
+  min-height: 65vh;
+  background:rgba(236, 240, 241, .3);
+}
+
+.contributors .user-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 50px;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0.5em; 
+  box-shadow: 0 10px 30px 0 rgba(100, 103, 105, 0.1);
+  margin: 0.5em 1em;
+  color: var(--bg-accent);
+}
+.contributors .user-row .username {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.contributors .user-row .username:hover {
+  color: #5fbae9
+}
+.contributors .user-row .username img {
+  border-radius: 50%;
+  margin: auto 1em;
+  width: 40px;
+  height: 40px;
 }
 
 

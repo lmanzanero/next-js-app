@@ -11,6 +11,9 @@ export default function Community  () {
         </Head>
         <div className="page community">
         <h1 className="title">Connect and learn with our community</h1>
+        <p className="desc">Protecting our enviornment has never been more important. Connect with others to start enforcing our environmental laws!</p>
+        <br/>
+        <br/>
         <br/>
         <UserCard/>
         </div>

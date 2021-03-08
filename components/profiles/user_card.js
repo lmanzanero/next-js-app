@@ -2,45 +2,45 @@ import React from 'react'
 
 export default function UserCard() {
   return (
-    <div class="profile-card">
-        <div class="cover"></div>
-        <div class="profile">
-          <div class="pic"></div>
-          <div class="above-fold">
-            <div class="name">
+    <div className="profile-card">
+        <div className="cover"></div>
+        <div className="profile">
+          <div className="pic"></div>
+          <div className="above-fold">
+            <div className="name">
               Luis Manzanero
             </div>
-            <div class="role">
+            <div className="role">
               Environmental Scientist
             </div>
-            <div class="location">
-              <i class="fas fa-map-marker-alt"></i>San Ignacio, Belize
+            <div className="location">
+              <i className="fas fa-map-marker-alt"></i>San Ignacio, Belize
             </div>
-            <div class="row">
-              <div class="button">
+            <div className="row">
+              <div className="button">
                 FOLLOW
               </div>
-              <div class="button">
+              <div className="button">
                 View
               </div>
             </div> 
           </div> 
-            <div class="row stats">
-              <div class="stat">
+            <div className="row stats">
+              <div className="stat">
                 <label>Posts</label>
-                <div class="num">
+                <div className="num">
                   0
                 </div>
               </div>
-              <div class="stat">
+              <div className="stat">
                 <label>Followers</label>
-                <div class="num">
+                <div className="num">
                   0
                 </div>
               </div>
-              <div class="stat">
+              <div className="stat">
                 <label>Following</label>
-                <div class="num">
+                <div className="num">
                   0
                 </div>
               </div>

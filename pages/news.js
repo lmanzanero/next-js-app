@@ -11,6 +11,7 @@ export default function News  () {
         </Head>
         <div className="page news">
           <h1 className="title">Learn about the environment and more!</h1>
+          <p className="desc">Academic and peer reviewed articles to educate society about the environment!</p>
           <ArticleCard/>
           <ArticleCard/>
         </div>

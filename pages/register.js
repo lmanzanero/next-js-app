@@ -18,7 +18,7 @@ export default function Register() {
               <div className="desc">Confirm password</div>
               <input type="text" id="password" className="fadeIn third" name="login" placeholder="password"/>
               <input type="text" id="password" className="fadeIn third" name="login" placeholder="password confirmation"/>
-              <input type="submit" className="fadeIn fourth" value="Log in" />
+              <input type="button" className="fadeIn fourth" value="Log in" />
           </form>
           <div id="formFooter">
               <a className="underlineHover" href="#">Forgot Password?</a>
