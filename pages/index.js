@@ -21,8 +21,8 @@ function App() {
       <Features/>
       <HowItWorksSection/>
       <AppPromoSection/>
-      <HighlightsSection/>
       <BettTtesingSection/>
+      <HighlightsSection/>
     </Layout>
   );
 }

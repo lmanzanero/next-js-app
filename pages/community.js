@@ -15,7 +15,11 @@ export default function Community  () {
         <br/>
         <br/>
         <br/>
-        <UserCard/>
+         <div className="community-row">
+          <UserCard/>
+          <UserCard/>
+          <UserCard/>
+         </div>
         </div>
       </Layout>
     )

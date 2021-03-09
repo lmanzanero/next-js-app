@@ -479,7 +479,7 @@ a:hover{
 .app-promo-section {
   display: grid;
   grid-template-columns: 30vw auto;
-  background-color: #466075;
+  background-color: #466075;  
 }
 
 .app-promo-section .promo-details {
@@ -487,7 +487,8 @@ a:hover{
   text-align: left;
   justify-content: center;
   align-items: center;  
-  margin: auto 2em;
+  margin: auto;
+  margin-left: 6em;
 }
 
 .app-promo-section .promo-details .platforms { 
@@ -577,8 +578,8 @@ a:hover{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: bisque;
-  height: 40vh; 
+  background-color: blanchedalmond;
+  height: 45vh; 
 }
 
 .section.beta-promotion h2 {
@@ -588,6 +589,7 @@ a:hover{
 
 .section.beta-promotion .desc {
   color: var(--bg-accent);
+  font-size: 1.2em;
   font-style: italic;
 }
 
@@ -607,14 +609,14 @@ a:hover{
   width: 300px;
   outline: none;
   border: none;
-  padding-left: 0.6em; 
+  padding-left: 1em; 
   margin: auto;
-  box-shadow: 0 10px 30px 0 rgba(100, 103, 105, 0.2);
+  border: 1px solid var(--text-color);
+  box-shadow: 0 10px 30px 0 rgba(100, 103, 105, 0.1);
 }
 
 .section .input-row textarea:focus, input:focus{
-  outline: none;
-  border: none; 
+  outline: none; 
 }
 
 
@@ -795,9 +797,15 @@ a:hover{
   text-align: center;
 }
 
+.community-row {
+  display: flex;
+  flex-direction: row;
+  padding: 1em 2em;
+}
+
 .profile-card { 
   position: relative;
-	width: 28rem;   
+	width: auto;   
   margin: 1em; 
 	font-family: 'Ubuntu', sans-serif;
 	letter-spacing: 0.025em;
@@ -812,11 +820,11 @@ a:hover{
   background-blend-mode: overlay;
   position: absolute;
   left: 50%;
-  width: 8rem;
-  height: 8rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  margin-top: -2rem;
+  margin-top: -1rem;
   z-index: 2;
   box-shadow: 0 1rem 1.5rem -1rem black;
 }
@@ -825,27 +833,28 @@ a:hover{
   position: relative;
   width: 100%;
   border-radius: 2rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
   box-sizing: border-box;
   transition: transform 500ms ease-in-out;
   box-shadow: 0 10px 30px 0 rgba(100, 103, 105, 0.2);
 }
 
 .profile-card .profile .above-fold {
-  padding-top: 3rem;
+  padding-top: 2.5rem;
 }
 
 .profile-card .profile .name {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 0.4rem;
+  color: var(--bg-accent);
 }
 
 .profile-card .profile .role {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: lightskyblue;
-  font-weight: 400;
-  margin-bottom: 0.8rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
 }
 
 .profile-card .profile .location {
@@ -867,8 +876,7 @@ a:hover{
 		
 .profile-card .stats {
   border-top: 1px solid rgba(var(--bg), 0.1);
-  margin-top: 1.5rem;
-
+  margin-top: 1rem;  
 }
 
 .profile-card .stats .stat {
@@ -895,17 +903,17 @@ a:hover{
     opacity: 0.4;
   }
 .profile-card .num {
-    font-weight: 700;
-    font-size: 2rem;
+    font-weight: 500;
+    font-size: 1.5rem;
     color: lightskyblue;
     margin: 0.5rem; 
 }
 
 
 .button {
-	width: 9rem; 
-	padding: 1.2rem;
-	margin: 1rem 0.5rem 0;
+	width: 8rem; 
+	padding: 1.1rem;
+	margin: 1rem 0.8rem 0;
 	box-sizing: border-box;
 	background: transparent;
 	cursor: pointer;
