@@ -1119,7 +1119,12 @@ a:hover{
   }
 
   .app-promo-section {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; 
+  }
+
+  .app-promo-section .promo-details {
+    margin-left: 0;
+    padding: 1em;
   }
 
   .app-promo-section .app-screens {  
