@@ -1196,6 +1196,14 @@ a:hover{
   .hero-section .buttons {
     display: block;
   }
+
+  .community-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 1em 2em;
+  }
 }
 
 @media screen and (min-width: 24.375em) {
