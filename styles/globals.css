@@ -253,7 +253,7 @@ a:hover{
   color: var(--bg-accent);
 }
 
-.page .desc {
+.page, .highlights .desc {
   padding: 0.5em;
   font-style: italic;
   color:var(--text-color);
@@ -496,7 +496,7 @@ a:hover{
   grid-template-columns: 1fr 1fr;
 }
 
-.app-promo-section .promo-details .desc {
+.app-promo-section .promo-details, .desc {
   line-height: 1.5em; 
 }
 
@@ -800,7 +800,15 @@ a:hover{
 .community-row {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  margin: auto;
   padding: 1em 2em;
+}
+
+.page.community .section-title {
+  color: var(--bg-accent);
+  text-decoration: underline; 
+  padding: 1em;
 }
 
 .profile-card { 

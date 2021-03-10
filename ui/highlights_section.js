@@ -2,8 +2,9 @@ import React from 'react'
 
 export default function HighlightsSection() {
   return (
-    <div className="section">
+    <div className="section highlights">
      <h1 className="title">Featured Articles</h1>
+     <p className="desc">Peered reviewed articles from our community</p>
      <div className="highlights-section">
         <div className="articles">
           <div className="article">
