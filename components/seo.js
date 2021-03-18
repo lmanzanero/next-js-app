@@ -12,7 +12,8 @@ const Seo = ({ seo }) => {
   const fullSeo = {
     ...seoWithDefaults,
     // Add title suffix
-    metaTitle: `${seoWithDefaults.metaTitle} | ${siteName}`,
+    // metaTitle: `${seoWithDefaults.metaTitle} | ${siteName}`,
+    metaTitle: `${seoWithDefaults.metaTitle} | EcoCrypt.org`,
     // Get full image URL
     shareImage: getStrapiMedia(seoWithDefaults.shareImage),
   };
