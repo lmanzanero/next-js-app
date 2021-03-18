@@ -1,5 +1,5 @@
 // import Articles from "../../components/articles";
-import { fetchAPI } from "../../services/api/media";
+import { fetchAPI } from "../../services/api/ArticleService";
 import Layout from "../../components/Layout";
 import Seo from "../../components/seo";
 
@@ -23,26 +23,26 @@ const Category = ({ category, categories }) => {
 };
 
 export async function getStaticPaths() {
-  // const categories = await fetchAPI("/categories");
+  const categories = await fetchAPI("/categories");
 
-  // return {
-  //   paths: categories.map((category) => ({
-  //     params: {
-  //       slug: category.slug,
-  //     },
-  //   })),
-  //   fallback: false,
-  // };
+  return {
+    paths: categories.map((category) => ({
+      params: {
+        slug: category.slug,
+      },
+    })),
+    fallback: false,
+  };
 }
 
 export async function getStaticProps({ params }) {
-  // const category = (await fetchAPI(`/categories?slug=${params.slug}`))[0];
-  // const categories = await fetchAPI("/categories");
+  const category = (await fetchAPI(`/categories?slug=${params.slug}`))[0];
+  const categories = await fetchAPI("/categories");
 
-  // return {
-  //   props: { category, categories },
-  //   revalidate: 1,
-  // };
+  return {
+    props: { category, categories },
+    revalidate: 1,
+  };
 }
 
 export default Category;
