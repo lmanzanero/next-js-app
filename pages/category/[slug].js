@@ -1,6 +1,6 @@
 import Articles from "../../components/articles";
 import { fetchAPI } from "../../services/api/media";
-import Layout from "../../components/layout";
+import Layout from "../../components/Layout";
 import Seo from "../../components/seo";
 
 const Category = ({ category, categories }) => {
