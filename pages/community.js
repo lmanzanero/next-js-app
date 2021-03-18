@@ -8,6 +8,7 @@ export default function Community  () {
       <Layout>
         <Head>
           <title>Community - Ecocrypt.org </title> 
+          <meta name="description" content="Connect with concerned citizens, authors and environmental scientist to enforce and protect our enviornment!"/>
         </Head>
         <div className="page community">
         <h1 className="title">Connect and learn with our community</h1>

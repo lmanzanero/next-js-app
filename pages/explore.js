@@ -13,6 +13,7 @@ export default function Explore  () {
       <Layout>
         <Head>
           <title>Explore - Ecocrypt.org </title> 
+          <meta name="description" content="See live updates, reports, and status of environmental pollution near your. Help identify and report environmental pollution!"/>
         </Head>
         <div className="page explore">
           <h1 className="title">Explore</h1>

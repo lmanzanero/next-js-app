@@ -13,7 +13,9 @@ function App() {
   return (
     <Layout>
        <Head>
-          <title>EcoCrypt.org - A social network to enforce environmental laws</title>
+          <title>EcoCrypt.org - A social network to enforce environmental laws</title> 
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <meta name="description" content="EcoCrypt.org is a social network that allows concerned citizens to report and collect data about pollution to authorities" key="homepage"/>
           <link rel="icon" href="/icons/planet-earth.svg" type="image/png" />
           <meta name="google-site-verification" content="kLIHlMJptobkvx6CYO5iWIzsCF3LUy2CrwthXExk9Z4" />
         </Head>

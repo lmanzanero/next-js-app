@@ -8,6 +8,7 @@ export default function News  () {
       <Layout>
          <Head>
           <title>News - Ecocrypt.org </title> 
+          <meta name="description" content="Read academic articles, case studies, and educational articles about the environemtal and pollution."/>
         </Head>
         <div className="page news">
           <h1 className="title">Learn about the environment and more!</h1>

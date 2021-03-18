@@ -7,6 +7,7 @@ export default function Register() {
     <Layout>
        <Head>
           <title>Register - Ecocrypt.org </title> 
+          <meta name="description" content="Register to create your account and start reporting, engaging, or helping indetify pollution in your area." key="register"/>
         </Head>
         <div className="page">
         <div className="auth-section">

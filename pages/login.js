@@ -7,6 +7,7 @@ export default function Login() {
     <Layout>
        <Head>
           <title>Login - Ecocrypt.org </title> 
+          <meta name="description" content="Login to your account and start reporting, engaging, or helping indetify pollution in your area." key="login"/>
         </Head>
       <div className="page">
         <div className="auth-section">
