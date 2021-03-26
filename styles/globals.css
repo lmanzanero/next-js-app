@@ -723,6 +723,7 @@ a:hover{
   justify-content: space-evenly;
   text-align: left;
   margin: 0px 1em;
+  max-height: 200px;
 }
 
 .article-card .content .categories a {

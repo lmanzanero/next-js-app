@@ -6,9 +6,8 @@ import Image from "../../components/image";
 import Seo from "../../components/seo";
 import { getStrapiMedia } from "../../services/api/media";
 
-const Article = ({ article, categories }) => {
-  const imageUrl = getStrapiMedia(article.image);
-
+const Article = ({ article, categories }) => { 
+  const imageUrl = getStrapiMedia(article.image);   
   const seo = {
     metaTitle: article.title,
     metaDescription: article.description,
@@ -25,7 +24,7 @@ const Article = ({ article, categories }) => {
         data-src={imageUrl}
         data-srcset={imageUrl}
         data-uk-img
-      >
+      > 
         <h1>{article.title}</h1>
       </div>
       <div className="uk-section">
@@ -34,9 +33,9 @@ const Article = ({ article, categories }) => {
           <hr className="uk-divider-small" />
           <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
             <div>
-              {article.user.picture && (
+              {article.user.image && (
                 <Image
-                  image={article.user.picture}
+                  image={article.user.image.url}
                   style={{
                     position: "static",
                     borderRadius: "50%",
@@ -47,7 +46,7 @@ const Article = ({ article, categories }) => {
             </div>
             <div className="uk-width-expand">
               <p className="uk-margin-remove-bottom">
-                By {article.user.name}
+                By {article.user.username}
               </p>
               <p className="uk-text-meta uk-margin-remove-top">
                 <Moment format="MMM Do YYYY">{article.published_at}</Moment>
@@ -61,8 +60,7 @@ const Article = ({ article, categories }) => {
 };
 
 export async function getStaticPaths() {
-  const articles = await fetchAPI("/articles");
-
+  const articles = await fetchAPI("/articles"); 
   return {
     paths: articles.map((article) => ({
       params: {
@@ -77,6 +75,7 @@ export async function getStaticProps({ params }) {
   const articles = await fetchAPI(
     `/articles?slug=${params.slug}&status=published`
   );
+ 
   const categories = await fetchAPI("/categories");
 
   return {
