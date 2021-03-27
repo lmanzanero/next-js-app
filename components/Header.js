@@ -33,12 +33,12 @@ function Navbar(props) {
         <li><Link href="/community">Community</Link></li>
         <li><Link href="/news">News</Link></li>
       </ul>
-      {/* <ul className="navbar-nav-right"> 
+      <ul className="navbar-nav-right"> 
         <li><Link href="/login">Login</Link></li>
         <li><Link href="/register">Sign up</Link></li>
-      </ul> */}
+      </ul>
       {/* If Authenticated, show this one */}
-      <ul className="navbar-nav">{props.children}</ul>
+      {/* <ul className="navbar-nav">{props.children}</ul> */}
     </nav>
   );
 }
