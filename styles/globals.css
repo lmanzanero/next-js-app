@@ -418,8 +418,9 @@ a:hover{
   height: 100%;
 }
 
-.features-section .feature-item .feature-info {
+.features-section .feature-item .feature-info { 
   text-align: left;
+  max-width: 300px;
 }
 
 .features-section .feature-item .feature-info .feature-title {
@@ -579,15 +580,16 @@ a:hover{
   flex-direction: column;
   justify-content: center;
   background-color: blanchedalmond;
-  height: 45vh; 
+  height: 45vh;  
+  padding: 2em;
 }
 
 .section.beta-promotion h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   color: var(--bg-accent);
 }
 
-.section.beta-promotion .desc {
+.section.beta-promotion .desc {  
   color: var(--bg-accent);
   font-size: 1.2em;
   font-style: italic;
