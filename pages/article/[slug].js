@@ -7,7 +7,8 @@ import Seo from "../../components/seo";
 import { getStrapiMedia } from "../../services/api/media";
 
 const Article = ({ article, categories }) => { 
-  const imageUrl = getStrapiMedia(article.image);   
+  const imageUrl = getStrapiMedia(article.image);  
+  console.log(article); 
   const seo = {
     metaTitle: article.title,
     metaDescription: article.description,
@@ -17,25 +18,18 @@ const Article = ({ article, categories }) => {
 
   return (
     <Layout categories={categories}>
-      <Seo seo={seo} />
-      <div
-        id="banner"
-        className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
-        data-src={imageUrl}
-        data-srcset={imageUrl}
-        data-uk-img
-      > 
-        <h1>{article.title}</h1>
-      </div>
-      <div className="uk-section">
-        <div className="uk-container uk-container-small">
+      <Seo seo={seo} /> 
+      <div className="page"> 
+        <div className="article">
+        <img id="banner" src={imageUrl} />
+          <h1 className="title">{article.title}</h1>
           <ReactMarkdown source={article.content} escapeHtml={false} />
           <hr className="uk-divider-small" />
           <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
             <div>
-              {article.user.image && (
+              {article.user.image && ( 
                 <Image
-                  image={article.user.image.url}
+                  image={article.user.image}
                   style={{
                     position: "static",
                     borderRadius: "50%",

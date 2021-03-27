@@ -248,9 +248,27 @@ a:hover{
   min-height: 80vh;  
 }
 
+.page .article {
+  width: 70vw;
+  margin: 1em auto;
+  font-size: 1.2rem;
+  line-height: 1.9rem;
+  color: var(--bg-accent);
+}
+
+#banner {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+#banner img {
+  height: 100%; 
+}
+
 .page .title {
   font-weight: 700; 
-  color: var(--bg-accent);
+  color: var(--bg-accent); 
 }
 
 .page, .highlights .desc {
