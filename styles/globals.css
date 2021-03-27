@@ -699,7 +699,7 @@ a:hover{
   margin: 1.5em auto;
   width: 70%;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 250px auto;
   transition: all 0.5s;
   border-radius: 0.3em;
   cursor: pointer;
@@ -720,10 +720,12 @@ a:hover{
 .article-card .content {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-evenly;  
+  color: var(--bg-accent);
   text-align: left;
-  margin: 0px 1em;
-  max-height: 200px;
+  width: auto; 
+  margin: 0.5em 1em;  
+  height: 190px;
 }
 
 .article-card .content .categories a {
@@ -737,21 +739,29 @@ a:hover{
 
 .article-card .content .exerpt {
   display: block; 
-  height: 50px;
+  height: 50px; 
   white-space: wrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.article-card .img-container {
-  width: 250px;
-  height: 100%;
+.article-card .img-container { 
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .article-card .img-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; 
+  transition: 0.5s;
+}
+
+.article-card .img-container img:hover {
+  width: 103%;
+  height: 103%;
+  transition: 0.5s;
 }
 
 .article-card .author {
@@ -761,9 +771,9 @@ a:hover{
 }
 
 .article-card .author .profile-img {
-  width: 40px;
-  height: 40px;
-  margin: auto 0.5em;
+  width: 35px;
+  height: 35px;
+  margin: auto 0.1em;
 }
 
 .article-card .author .profile-img img {
@@ -804,6 +814,10 @@ a:hover{
   justify-content: center;
   margin: auto;
   padding: 1em 2em;
+}
+
+.community-row.top-contributors {
+  background-color: #cccccc;
 }
 
 .page.community .section-title {
@@ -1073,11 +1087,20 @@ a:hover{
   background:rgba(236, 240, 241, .3);
 }
 
+.contributors-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .contributors .user-row {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  height: 50px;
+  height: 55px;
+  min-width: 300px;
   justify-content: space-around;
   align-items: center;
   border-radius: 0.5em; 
