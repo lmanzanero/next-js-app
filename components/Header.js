@@ -12,20 +12,10 @@ import { CSSTransition } from 'react-transition-group';
 
 export default function Header () {
     return ( 
-      <Navbar> 
-        <NavItem name="Register"
-                  url="register"
-        />
-        <NavItem name="Login"
-                  url="login"
-        />
-        {/* <NavItem icon={PlusIcon} />
-        <NavItem icon={BellIcon} />
-        <NavItem icon={MessengerIcon} />
-
-        <NavItem icon={CaretIcon}>
+      <Navbar>  
+        <NavItem>
           <DropdownMenu></DropdownMenu>
-        </NavItem> */}
+        </NavItem>
      </Navbar>  
     );
 }
@@ -43,12 +33,12 @@ function Navbar(props) {
         <li><Link href="/community">Community</Link></li>
         <li><Link href="/news">News</Link></li>
       </ul>
-      <ul className="navbar-nav-right"> 
+      {/* <ul className="navbar-nav-right"> 
         <li><Link href="/login">Login</Link></li>
         <li><Link href="/register">Sign up</Link></li>
-      </ul>
+      </ul> */}
       {/* If Authenticated, show this one */}
-      {/* <ul className="navbar-nav">{props.children}</ul> */}
+      <ul className="navbar-nav">{props.children}</ul>
     </nav>
   );
 }
@@ -57,11 +47,9 @@ function NavItem(props) {
   const [open, setOpen] = useState(false);
   return (
     <li className="nav-item">
-      <Link href={{pathname: `/${props.url}`}} className="icon-button" onClick={() => setOpen(!open)}>
-        {/* {props.icon}   */}
-        {/* <img src= {props.icon}  />  */}
-        {props.name}
-      </Link>
+      <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
+         {props.icon} 
+      </a>
 
       {open && props.children}
     </li>
@@ -101,7 +89,12 @@ function DropdownMenu() {
         classNames="menu-primary"
         unmountOnExit
         onEnter={calcHeight}>
+          
         <div className="menu">
+          <DropdownItem><Link href="/explore">Explore</Link></DropdownItem>
+          <DropdownItem><Link href="/community">Community</Link></DropdownItem>
+          <DropdownItem><Link href="/news">News</Link></DropdownItem>
+          <hr/>
           <DropdownItem>My Profile</DropdownItem>
           <DropdownItem
             leftIcon={CogIcon}

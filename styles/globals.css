@@ -1171,15 +1171,12 @@ a:hover{
   }
 
   .navbar {
+    position: relative;
     width: 100vw;
     display: flex; 
     justify-content: center;
     padding: 0;
     margin: 0;
-  }
-
-  .navbar li {
-    display: none;
   }
 
   .navbar .nav-logo {
@@ -1189,6 +1186,15 @@ a:hover{
   .navbar .nav-logo img {
     margin: 0;
     padding: 0; 
+  }
+
+  .navbar-nav-left {
+    display: none;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    left: 80%;
   }
 
 
