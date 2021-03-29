@@ -18,9 +18,9 @@ const Article = ({ article, categories }) => {
   return (
     <Layout categories={categories}>
       <Seo seo={seo} /> 
+      <img id="banner" src={imageUrl} />
       <div className="page"> 
         <div className="article">
-        <img id="banner" src={imageUrl} />
           <h1 className="title">{article.title}</h1>
           <ReactMarkdown source={article.content} escapeHtml={false} />
           <hr className="uk-divider-small" />

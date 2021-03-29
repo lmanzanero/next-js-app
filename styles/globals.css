@@ -256,13 +256,46 @@ a:hover{
 
 .page .article {
   width: 70vw;
-  margin: 1em auto;
+  margin: 1em auto;   
   font-size: 1.2rem;
   line-height: 1.9rem;
   color: var(--bg-accent);
 }
 
+.page .article * {
+  padding: 0px 0.5em;
+}
+
+.page .article p {
+  text-align: justify;
+}
+
+.page .article figure {
+  width: 100%;
+  margin: 0;
+  padding: 0; 
+}
+
+.page .article figure figcaption {
+  font-family: monospace;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-style: italic;
+  color: var(--text-color);
+}
+
+.page .article figure img{
+  width:100%; 
+  margin: 0px;
+  padding: 0;
+  max-height:40vw;
+  overflow: hidden;
+  object-fit: cover;
+}
+
 #banner {
+  margin: 0;
+  padding: 0;
   height: 500px;
   width: 100%;
   object-fit: cover;
@@ -272,8 +305,10 @@ a:hover{
   height: 100%; 
 }
 
+
 .page .title {
   font-weight: 700; 
+  line-height: 2.5rem;
   color: var(--bg-accent); 
 }
 
@@ -759,7 +794,7 @@ a:hover{
   width: auto; 
   margin: 0.5em 1em;  
   height: 190px;
-}
+} 
 
 .article-card .content .categories a {
   color: var(--bg-accent); 
@@ -1267,6 +1302,16 @@ a:hover{
     margin: auto;
     padding: 1em 2em;
   }
+
+
+.page .article {
+  width: 100%;
+  margin: 1em auto; 
+  font-size: 1.2rem;
+  line-height: 1.9rem;
+  color: var(--bg-accent);
+}
+
 
   .page.explore .explore-tabs {
     position: sticky;
