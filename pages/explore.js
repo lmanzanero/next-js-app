@@ -18,8 +18,8 @@ export default function Explore  () {
         <div className="page explore">
           <h1 className="title">Explore</h1>
           <p className="desc">See the status of enviormental pollution around the world</p>
-          <Tabs selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
-            <TabList>
+          <Tabs  selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
+            <TabList className="explore-tabs">
               <Tab>Reports</Tab>
               <Tab>Topics</Tab>
               <Tab>Unresolved</Tab>

@@ -3,8 +3,10 @@ import Layout from '../components/Layout';
 
 export default function Dashboard() {
   return (
-    <Layout>
-      <h1>Dashboard</h1>
+    <Layout> 
+      <div className="page">
+        <h1 className="title">Dashboard</h1>
+      </div>
     </Layout>
   );
 }

@@ -46,20 +46,26 @@ a:hover{
 /* React Tabs */
 
 .react-tabs { 
-  text-align: center; 
+  text-align: center;  
 }
 
 .react-tabs ul { 
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center;  
+  background-color: white;
+  padding: 0px 1em;
   color: var(--text-color); 
+  font-size: 0.9rem;
   border: none;
 }
 
 .react-tabs ul li {
   height: 1.5em;
-  margin: 1em;
+  margin: 0.5em auto;
   border: none;
-  color: var(--bg); 
-  justify-content: center; 
+  color: var(--bg);  
 }
 
 .react-tabs .react-tabs__tab--selected {
@@ -279,6 +285,13 @@ a:hover{
 
 .page.explore { 
   text-align: center;
+}
+
+.page.explore .explore-tabs {
+  position: sticky;
+  top: 0; 
+  margin: 0 auto;
+  max-width: 50vw;
 }
 
 .page.explore .more-section {
@@ -1253,6 +1266,13 @@ a:hover{
     justify-content: center;
     margin: auto;
     padding: 1em 2em;
+  }
+
+  .page.explore .explore-tabs {
+    position: sticky;
+    top: 0; 
+    margin: 0 auto;
+    max-width: 100vw;
   }
 }
 

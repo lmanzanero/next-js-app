@@ -7,8 +7,7 @@ import Seo from "../../components/seo";
 import { getStrapiMedia } from "../../services/api/media";
 
 const Article = ({ article, categories }) => { 
-  const imageUrl = getStrapiMedia(article.image);  
-  console.log(article); 
+  const imageUrl = getStrapiMedia(article.image);   
   const seo = {
     metaTitle: article.title,
     metaDescription: article.description,
