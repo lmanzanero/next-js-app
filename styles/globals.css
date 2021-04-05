@@ -661,6 +661,7 @@ a:hover{
 }
 
 .highlights-section .articles .article { 
+  color: var(--bg-accent);
   text-align: left;
   min-width: 200px; 
   padding: 1em;
@@ -677,10 +678,20 @@ a:hover{
   transition: all 0.5s;
 } 
 
+.highlights-section .articles .article .article-title {
+  height: 50px; 
+}
+
 .highlights-section .articles .article img {
   height: 200px;
   width: 100%;
   object-fit: cover;
+}
+
+.highlights-section .articles .article .article-exerpt {
+  height: 55px;
+  padding: auto 0.5em;
+  overflow: hidden; 
 }
 
 .section.beta-promotion {
@@ -1089,10 +1100,8 @@ a:hover{
   margin-bottom: 2em;
 }
 
-.footer__logo {
-  font-family: 'Pacifico', cursive;
-  font-weight: 600;
-  text-transform: lowercase;
+.footer__logo { 
+  font-weight: 700; 
   font-size: 1.5rem;
   color: var(--bg-accent);
 }

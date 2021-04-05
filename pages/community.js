@@ -16,7 +16,7 @@ export default function Community  () {
         <p className="desc">Protecting our enviornment has never been more important. Connect with others to start enforcing our environmental laws!</p>
         <section>
           <h3 className="section-title">Latest Top Contributors</h3> 
-          <div className="contributors-row">
+          {/* <div className="contributors-row">
             <div className="contributors-col">
                 <div className="contributors top-contributors">
                   <h5>Most Reports</h5>
@@ -35,9 +35,9 @@ export default function Community  () {
                   <UserRow/>
                 </div>
             </div>
-          </div>
+          </div> */}
         </section> 
-        <section>
+        {/* <section>
           <h3 className="section-title">2020 Top Contributors</h3> 
           <div className="contributors-row">
             <div className="contributors-col">
@@ -59,15 +59,15 @@ export default function Community  () {
                 </div>
             </div>
           </div>
-        </section> 
-        <section>
+        </section>  */}
+        {/* <section>
           <h3 className="section-title">Near you</h3> 
           <div className="community-row">
             <UserCard/>
             <UserCard/>
             <UserCard/>
           </div>
-        </section>
+        </section> */}
         </div>
       </Layout>
     )

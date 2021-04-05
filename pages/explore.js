@@ -20,7 +20,7 @@ export default function Explore  () {
           <p className="desc">See the status of enviormental pollution around the world</p>
           <Tabs  selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
             <TabList className="explore-tabs">
-              <Tab>Reports</Tab>
+              <Tab>Trending</Tab>
               <Tab>Topics</Tab>
               <Tab>Unresolved</Tab>
               <Tab>Contributors</Tab>

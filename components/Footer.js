@@ -11,7 +11,7 @@ export default function Footer  () {
               <address>
                 Contibute to this open source project!<br/>
                     
-                <a className="footer__btn" href="mailto:example@gmail.com">Contribute</a> 
+                <a className="footer__btn" href="https://github.com/ecocrypt-org" target="_blank">Contribute</a> 
               </address>
             </div>
             
@@ -21,15 +21,15 @@ export default function Footer  () {
 
                 <ul className="nav__ul">
                   <li>
-                    <a href="#">About</a>
+                    <a href="/explore">About</a>
                   </li>
 
                   <li>
-                    <a href="#">Community</a>
+                    <a href="/community">Community</a>
                   </li>
                       
                   <li>
-                    <a href="#">Blog</a>
+                    <a href="/news">Blog</a>
                   </li>
                 </ul>
               </li>
@@ -84,7 +84,7 @@ export default function Footer  () {
             </ul>
             
             <div className="legal">
-              <p>&copy; 2021 Something. All rights reserved.</p>
+              <p>&copy; 2021 Ecocrypt. All rights reserved.</p>
               
               <div className="legal__links">
                 <span>Made with <span className="heart">♥</span> remotely from Anywhere</span>
