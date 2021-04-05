@@ -5,6 +5,7 @@ import Layout from "../../components/Layout"
 import Image from "../../components/image";
 import Seo from "../../components/seo";
 import { getStrapiMedia } from "../../services/api/media";
+import ShareButtons from "../../components/social/share_buttons";
 
 const Article = ({ article, categories }) => { 
   const imageUrl = getStrapiMedia(article.image);   
@@ -22,6 +23,7 @@ const Article = ({ article, categories }) => {
       <div className="page"> 
         <div className="article">
           <h1 className="title">{article.title}</h1>
+          <ShareButtons/>
           <ReactMarkdown source={article.content} escapeHtml={false} />
           <hr className="uk-divider-small" />
           <div className="uk-grid-small uk-flex-left" data-uk-grid="true">

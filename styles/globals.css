@@ -255,16 +255,16 @@ a:hover{
 }
 
 .page .article {
-  width: 70vw;
+  width: 60vw;
   margin: 1em auto;   
   font-size: 1.2rem;
   line-height: 1.9rem;
   color: var(--bg-accent);
 }
 
-.page .article * {
+/* .page .article * {
   padding: 0px 0.5em;
-}
+} */
 
 .page .article p {
   text-align: justify;
@@ -292,6 +292,49 @@ a:hover{
   overflow: hidden;
   object-fit: cover;
 }
+
+.page .article .share-buttons { 
+  position: sticky; 
+  top: 30%; 
+  margin-left: -120px;
+  width: 100px;
+  height: 0;
+  display: flex;
+  flex-direction: column;   
+  align-items: center;
+  justify-content: left;
+}
+
+.page .article .share-button { 
+  margin: 1em;   
+  height: 25px;
+  width: 25px;  
+  border: 1px solid var(--bg); 
+  padding: 0.2em;
+  border-radius: 0.6em;
+  box-shadow: rgb(0 0 0 / 8%) 0px 6px 10px; 
+  /* box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); */
+  transition: all 0.3s;
+}
+
+.page .article .share-button:hover{
+  cursor: pointer;
+  border: 1px solid var(--bg-accenty); ;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.35), 0 10px 10px rgba(0,0,0,0.32);
+  transition: all 0.3s;
+}
+
+.page .article .share-button svg {
+  height: 100%;
+  width: 100%;   
+  margin: auto;  
+  color: #35535c;
+}
+
+.page .article .share-button svg path {
+  fill: var(--bg-accent);
+}
+
 
 #banner {
   margin: 0;
@@ -1304,13 +1347,17 @@ a:hover{
 
 
 .page .article {
-  width: 100%;
-  margin: 1em auto; 
+  width: 90vw;
+  margin: 1em auto;  
   font-size: 1.2rem;
   line-height: 1.9rem;
   color: var(--bg-accent);
 }
 
+
+.page .article figure img {  
+  max-height:65vh; 
+}
 
   .page.explore .explore-tabs {
     position: sticky;
