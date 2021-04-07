@@ -362,7 +362,7 @@ a:hover{
 }
 
 .page.explore { 
-  text-align: center;
+  text-align: center; 
 }
 
 .page.explore .explore-tabs {
@@ -1245,6 +1245,115 @@ a:hover{
   height: 40px;
 }
 
+
+.map-view-container { 
+  position: relative;
+  display: block; 
+  grid-gap: 1em;
+  height: 70vh; 
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.map-view-container .map-side-bar { 
+  position: absolute;
+  background: rgba(234,237,239,.85);
+  box-shadow: 0 2px 20px rgb(0 0 0 / 50%);
+  border-radius: 0 2em 2em 0;
+  overflow: hidden;
+  height: 100%;
+}
+
+.map-view-container .map-side-bar input {
+  border-radius: 1em;
+  width: 300px;
+  height: 45px;
+  margin: 1em;
+  padding: 8px 16px;
+  overflow: hidden; 
+  border: 2px solid #dfe3e7;
+  outline: none;
+  -webkit-appearance: none; 
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.map-view-container .map-side-bar .current-location {
+  height: 60px; 
+  background: white;
+  color: var(--bg-accent);
+  border: 2px solid #dfe3e7;
+  border-radius: 1em;
+  margin: 0.5em 1em;
+}
+
+.map-view-container .map-container { 
+  background-image: url('http://static1.squarespace.com/static/58c4236c893fc021ade990bc/58c4241b725e25606fa9efb0/59526c7ce6f2e17c04da132d/1498574249733/VIDEO-SNAPMAP.JPG?format=1500w'); 
+  height: 100%;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+.map-view-container .map-side-bar .map-stories-container {
+  border: 1px solid red;
+  display: block; 
+  height: auto; 
+  background: white;
+  color: var(--bg-accent);
+  border: 2px solid #dfe3e7;
+  border-radius: 1em;
+  margin: 0.5em 1em; 
+  list-style-type: none;
+}
+ 
+
+.map-view-container .map-side-bar .map-stories-container .story {
+  display: grid; 
+  grid-template-columns: auto 1fr; 
+  place-content: center;
+  height: 50px;
+  margin: 0 auto;
+  padding-left: 1em;
+  border-top: 1px solid #dfe3e7; 
+  cursor: pointer;
+}
+
+.map-view-container .map-side-bar .map-stories-container .story:hover {
+  background: whitesmoke;
+}
+
+.map-view-container .map-side-bar .map-stories-container .story img {
+  height: 35px;
+  width: 35px;
+  margin: 0 auto;
+  border-radius: 1em; 
+  border: 3px solid #dfe3e7;
+}
+
+.map-view-container .map-side-bar .map-stories-container .story .story-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  line-height: 1.2em;
+  padding-left: 0.5em;
+  text-align: left; 
+}
+
+.map-view-container .map-side-bar .map-stories-container .story .story-details .story-title {
+  font-size: 1em;
+  font-weight: 600;
+  color: (var(--bg-accent)); 
+  margin: 0;
+}
+
+.map-view-container .map-side-bar .map-stories-container .story .story-details span{
+  font-size: 0.8em;
+  color:  var(--text-color); 
+  margin: 0;
+}
 
 
 @media only screen and (max-width: 768px) {
