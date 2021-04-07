@@ -8,7 +8,7 @@ export default function MapSideBar() {
         <span></span> <h3>Current Location</h3>
       </div>
       <ui className="map-stories-container">
-        <div className="title">Trending</div> 
+        <div className="title">Near you</div> 
         <li className="story">
           <img src="https://avatars.githubusercontent.com/u/20497361?s=460&u=fcce070b780d1229d7d97890113a85f00cf4a049&v=4"/>
           <div className="story-details">

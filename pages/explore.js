@@ -23,7 +23,7 @@ export default function Explore  () {
               <Tab>Trending</Tab>
               <Tab>Topics</Tab>
               <Tab>Unresolved</Tab>
-              <Tab>Contributors</Tab>
+              <Tab>Hotspots</Tab>
             </TabList>
             <TabPanel>
               <Reports/>
@@ -38,7 +38,7 @@ export default function Explore  () {
               <Contributors/>
             </TabPanel>
           </Tabs>
-          <div className="more-section">
+          {/* <div className="more-section">
             <h2>More ways to explore</h2>
             <div className="more-row">
               <div className="content">
@@ -62,7 +62,7 @@ export default function Explore  () {
                 <div className="desc">Ensure that issues are being resolved with your evidence!</div>
               </div>
             </div> 
-          </div>
+          </div> */}
         </div>
       </Layout>
     )
