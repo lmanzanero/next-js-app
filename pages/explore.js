@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import Layout from '../components/Layout';
 import Head from 'next/head';
 import { Tabs, TabList, Tab, TabPanel } from 'react-tabs';
+import { fetchAPI } from '../services/api/ArticleService';
 import Reports from '../components/explore/reports';
 import Topics from '../components/explore/topics';
 import Unresolved from '../components/explore/unresolved';
 import Contributors from '../components/explore/contributors';
 
-export default function Explore  () {
+export default function Explore  ({ data }) {
   const [tabIndex, setTabIndex] = useState(0);
+  //https://jsonplaceholder.typicode.com/users
     return (
       <Layout>
         <Head>
@@ -26,7 +28,7 @@ export default function Explore  () {
               <Tab>Hotspots</Tab>
             </TabList>
             <TabPanel>
-              <Reports/>
+              <Reports data={data}/>
             </TabPanel>
             <TabPanel>
               <Topics/>
@@ -66,4 +68,15 @@ export default function Explore  () {
         </div>
       </Layout>
     )
+}
+
+export async function getStaticProps() {
+  // Run API calls in parallel
+  const response = await fetch("https://jsonplaceholder.typicode.com/users"); 
+  const data = await response.json();
+
+  return {
+    props: { data },
+    revalidate: 1,
+  };
 }

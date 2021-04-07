@@ -1,20 +1,22 @@
 import React from 'react'
 
-export default function Post() {
+export default function Post({ data }) {
+  const { name, username, email,  address: { street, suite, city, geo: { lat, long }} } = data;
+  console.log(name)
   //Todo: Should look like post feed similar to tiktok
   return (
     <div className="post-container">
       <div className="post-header">
         <div className="user-details">
           <img src="https://avatars.githubusercontent.com/u/20497361?s=460&u=fcce070b780d1229d7d97890113a85f00cf4a049&v=4"/>
-          <p className="username">@lmanzanero</p>
+          <p className="username">@{username}</p>
         </div>
         <div className="post-details">
           <div className="post-desc">
-            Garbage thrown on the macal river bank!
+            {name}
           </div>
           <div className="post-tags">
-            #pollution #garbage #deforestation
+            #{street} #{suite} #{city}
           </div>
         </div>
       </div>

@@ -1,10 +1,11 @@
 import React from 'react'
 import MapView from './map/mapview'
 
-export default function Reports() {
+export default function Reports({ data }) {
   return (
     <div className="explore-section"> 
-      <MapView/>
+      {/* Sticky Side bar here */}
+      <MapView data={data}/>
     </div>
   )
 }
