@@ -22,15 +22,15 @@ export default function News ({ articles, categories }) {
 }
 
 
-export async function getStaticProps() {
-  // Run API calls in parallel
-  const [articles, categories] = await Promise.all([
-    fetchAPI("/articles?status=published"),
-    fetchAPI("/categories"), 
-  ]);
+// export async function getStaticProps() {
+//   // Run API calls in parallel
+//   const [articles, categories] = await Promise.all([
+//     fetchAPI("/articles?status=published"),
+//     fetchAPI("/categories"), 
+//   ]);
 
-  return {
-    props: { articles, categories },
-    revalidate: 1,
-  };
-}
+//   return {
+//     props: { articles, categories },
+//     revalidate: 1,
+//   };
+// }
