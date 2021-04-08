@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
-import Head from 'next/head';
-import { Tabs, TabList, Tab, TabPanel } from 'react-tabs'; 
+import Head from 'next/head'; 
 import PostsView from '../components/explore/map/postsview';
 import Map from '../components/explore/map/map';
 import MapSideBar from '../components/explore/map/map_side_bar'; 
