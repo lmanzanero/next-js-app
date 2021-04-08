@@ -6,7 +6,7 @@ import MapSideBar from './map_side_bar'
 export default function MapView({ data }) { 
   return (
     <div className="map-view-container">
-      <MapSideBar/>
+      {/* <MapSideBar/> */}
       {/* <Map/> */}
       {
         data.map((postdata, key)=> {

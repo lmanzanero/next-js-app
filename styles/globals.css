@@ -62,7 +62,7 @@ a:hover{
 }
 
 .react-tabs ul li {
-  height: 1.5em;
+  height: 1.5em;  
   margin: 0.5em auto;
   border: none;
   color: var(--bg);  
@@ -361,15 +361,15 @@ a:hover{
   color:var(--text-color);
 }
 
-.page.explore { 
+.page.explore {  
   text-align: center;  
 }
 
 .page.explore .explore-tabs {
   position: sticky;
-  top: 0; 
+  top: 0;  
   margin: 0 auto;
-  max-width: 50vw;
+  max-width: 45vw;
   z-index: 1;
 }
 
@@ -1201,9 +1201,10 @@ a:hover{
   color: var(--bg-accent);
 }
 
-.explore-section{
-  margin: auto 2em;
-  min-height: 65vh;
+.explore-section{ 
+  display: flex;
+  flex-direction: row;
+  margin: auto 2em; 
   background:rgba(236, 240, 241, .3);
 }
 
@@ -1249,25 +1250,25 @@ a:hover{
 
 .map-view-container { 
   position: sticky;
-  display: block; 
-  grid-gap: 1em;
+  top: 0;  
   height: 100%; 
   margin: 0;
   padding: 0; 
-  overflow: scroll;
+  overflow: scroll; 
 }
 
-.map-view-container .map-side-bar { 
-  position: fixed;    
+.map-side-bar { 
+  position: sticky; 
+  top: 55px;    
   background: rgba(234,237,239,.85);
-  box-shadow: 0 2px 20px rgb(0 0 0 / 50%);
+  /* box-shadow: 0 2px 20px rgb(0 0 0 / 50%); */
   border-radius: 0 2em 2em 0; 
   overflow: hidden; 
-  height: 50vh;
-  width: 300px;
+  height: 90vh;
+  width: 350px; 
 }
 
-.map-view-container .map-side-bar input {
+.map-side-bar input {
   border-radius: 1em;
   width: 300px;
   height: 45px;
@@ -1282,7 +1283,7 @@ a:hover{
   line-height: 24px;
 }
 
-.map-view-container .map-side-bar .current-location {
+.map-side-bar .current-location {
   height: 60px; 
   background: white;
   color: var(--bg-accent);
@@ -1291,7 +1292,7 @@ a:hover{
   margin: 0.5em 1em;
 }
 
-.map-view-container .map-container { 
+.map-container { 
   background-image: url('http://static1.squarespace.com/static/58c4236c893fc021ade990bc/58c4241b725e25606fa9efb0/59526c7ce6f2e17c04da132d/1498574249733/VIDEO-SNAPMAP.JPG?format=1500w'); 
   height: 100%;
   background-position: center; /* Center the image */
@@ -1299,7 +1300,7 @@ a:hover{
   background-size: cover;
 }
 
-.map-view-container .map-side-bar .map-stories-container {
+.map-side-bar .map-stories-container {
   border: 1px solid red;
   display: block; 
   height: auto; 
@@ -1312,22 +1313,22 @@ a:hover{
 }
  
 
-.map-view-container .map-side-bar .map-stories-container .story {
+.map-side-bar .map-stories-container .story {
   display: grid; 
   grid-template-columns: auto 1fr; 
   place-content: center;
   height: 50px;
   margin: 0 auto;
   padding-left: 1em;
-  border-top: 1px solid #dfe3e7; 
-  cursor: pointer;
+  border-top: 1px solid #dfe3e7;  
+  cursor: pointer; 
 }
 
-.map-view-container .map-side-bar .map-stories-container .story:hover {
-  background: whitesmoke;
+.map-side-bar .map-stories-container .story:hover {
+  background: whitesmoke; 
 }
 
-.map-view-container .map-side-bar .map-stories-container .story img {
+.map-side-bar .map-stories-container .story img {
   height: 35px;
   width: 35px;
   margin: 0 auto;
@@ -1335,7 +1336,7 @@ a:hover{
   border: 3px solid #dfe3e7;
 }
 
-.map-view-container .map-side-bar .map-stories-container .story .story-details {
+.map-side-bar .map-stories-container .story .story-details {
   display: flex;
   flex-direction: column;
   justify-content: center;  
@@ -1344,14 +1345,14 @@ a:hover{
   text-align: left; 
 }
 
-.map-view-container .map-side-bar .map-stories-container .story .story-details .story-title {
+.map-side-bar .map-stories-container .story .story-details .story-title {
   font-size: 1em;
   font-weight: 600;
   color: (var(--bg-accent)); 
   margin: 0;
 }
 
-.map-view-container .map-side-bar .map-stories-container .story .story-details span{
+.map-side-bar .map-stories-container .story .story-details span{
   font-size: 0.8em;
   color:  var(--text-color); 
   margin: 0;
@@ -1359,7 +1360,8 @@ a:hover{
 
 /* Posts */
 .post-container { 
-  margin-left: 350px;
+  margin-left: 1em;
+  width: 40vw;
 }
 
 .post-container .post-header {
@@ -1573,12 +1575,43 @@ a:hover{
   max-height:65vh; 
 }
 
-  .page.explore .explore-tabs {
+.page.explore .explore-tabs {
     position: sticky;
     top: 0; 
     margin: 0 auto;
     max-width: 100vw;
   }
+
+.map-side-bar { 
+  display: none;
+  position: sticky; 
+  top: 55px;    
+  background: rgba(234,237,239,.85);
+  /* box-shadow: 0 2px 20px rgb(0 0 0 / 50%); */
+  border-radius: 0 2em 2em 0; 
+  overflow: hidden; 
+  height: 90vh; 
+  width: 350px; 
+}
+
+.post-container {
+  margin: 0;
+  width: 100%;
+}
+
+.post-container .post-header .post-details { 
+}
+
+.post-container .post-body {
+  width: 30vh;
+}
+
+.post-container .post-body .post-image {
+  width: 100%;
+  height: 60vh;
+  margin-left: -3em;
+}
+  
 }
 
 @media screen and (min-width: 24.375em) {
