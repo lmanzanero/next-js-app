@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import Head from 'next/head'; 
 import PostsView from '../components/explore/map/postsview';
 import Map from '../components/explore/map/map';
 import MapSideBar from '../components/explore/map/map_side_bar'; 
 
-export default function Explore  ({ data }) {
-  const [tabIndex, setTabIndex] = useState(0); 
+export default function Explore  ({ data }) { 
+    const [toggleView, setToggleView] = useState("off");
+
+    function toggleMapView() {
+      //toggles map and post view
+      setToggleView(toggleView === "off" ? "on" : "off");
+    }
+
     return (
       <Layout>
         <Head>
@@ -21,18 +27,17 @@ export default function Explore  ({ data }) {
             <li>Unresovled</li>
             <li>Hotspots</li>
             <li>Topics</li>
-          </ul>
-          {/* <Tabs  selectedIndex={tabIndex} onSelect={index => setTabIndex(index)}>
-            <TabList className="explore-tabs">
-              <Tab>Reports</Tab>
-              <Tab>Unresolved</Tab>
-              <Tab>Hotspots</Tab>
-              <Tab>Topics</Tab>
-            </TabList>
-          </Tabs>  */}
+          </ul> 
           <div className="explore-section">
-            <MapSideBar/>
-            <PostsView data={data}/>
+            <div className={`switch ${toggleView}`} onClick={toggleMapView} >
+              <span>{toggleView === "off" ? "🌎 Map" : "👥 Posts"}</span>
+            </div>
+            <MapSideBar/> 
+            {
+              toggleView === "off" ?  <PostsView data={data}/> :  <Map/> 
+            }
+            {/* <MapSideBar/>
+            <PostsView data={data}/> */}
             {/* <Map/> */}
           </div>
         </div>
