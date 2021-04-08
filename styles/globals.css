@@ -1594,6 +1594,10 @@ a:hover{
     max-width: 100vw; 
   }
 
+.explore-section {  
+  margin: auto auto;  
+}
+
 .map-side-bar { 
   display: none;
   position: sticky; 
@@ -1611,17 +1615,14 @@ a:hover{
   width: 100%;
 }
 
-.post-container .post-header .post-details { 
-}
-
 .post-container .post-body {
-  width: 30vh;
+  width: 34vh;
 }
 
 .post-container .post-body .post-image {
   width: 100%;
   height: 60vh;
-  margin-left: -3em;
+  margin-left: -1em;
 }
   
 }
