@@ -333,6 +333,8 @@ a:hover{
 
 .page.explore {  
   text-align: center;  
+  width: 85vw;
+  margin: auto;
 }
 
 .page.explore .explore-tabs {
@@ -347,8 +349,7 @@ a:hover{
   background-color: white;
   padding: 0px 1em;
   color: var(--text-color); 
-  font-size: 0.9rem;
-  border: 1px solid red;
+  font-size: 0.9rem; 
 }
 
 .page.explore .explore-tabs li {
@@ -1380,6 +1381,30 @@ a:hover{
   color:  var(--text-color); 
   margin: 0;
 }
+ 
+
+.map-side-bar .discover-stories-container .hashtags {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex; 
+  flex-direction:row;
+  flex-wrap:wrap;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.map-side-bar .discover-stories-container .hashtag {
+  margin: 0.5em;
+  padding: 0.2em;
+  border-radius: 0.4em;
+  width:auto; 
+  background-color: #cccccc;
+  color: #242526;
+  cursor: pointer;
+}
+
 
 /* Posts */
 .post-container, .map-container { 
@@ -1598,6 +1623,10 @@ a:hover{
   max-height:65vh; 
 }
 
+.page.explore {
+  width: 100vw;
+}
+
 .page.explore .explore-tabs {
     position: sticky;
     top: 0; 
@@ -1613,7 +1642,7 @@ a:hover{
   display: none;
   position: sticky; 
   top: 55px;    
-  background: rgba(234,237,239,.85);
+  /* background: rgba(234,237,239,.85); */
   /* box-shadow: 0 2px 20px rgb(0 0 0 / 50%); */
   border-radius: 0 2em 2em 0; 
   overflow: hidden; 

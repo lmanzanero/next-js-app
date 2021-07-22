@@ -31,6 +31,19 @@ export default function MapSideBar() {
           </div>
         </li>
       </ui>
+      <div className="discover-stories-container">
+        <div className="title">Discover</div> 
+        <div className="hashtags">
+            <div className="hashtag">#garbagedump</div>
+            <div className="hashtag">#pollution</div>
+            <div className="hashtag">#hunting</div>
+            <div className="hashtag">#poaching</div>
+            <div className="hashtag">#wasterunoff</div>
+            <div className="hashtag">#deforestation</div>
+            <div className="hashtag">#forestfire</div>
+            <div className="hashtag">#chemicalwaste</div>
+        </div>
+      </div>
     </div>
   )
 }
