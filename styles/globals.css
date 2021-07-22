@@ -1308,7 +1308,7 @@ a:hover{
   margin: 1em;
   padding: 8px 16px;
   overflow: hidden; 
-  border: 2px solid #dfe3e7;
+  border: 1px solid #dfe3e7;
   outline: none;
   -webkit-appearance: none; 
   font-size: 16px;
@@ -1320,7 +1320,7 @@ a:hover{
   height: 60px; 
   background: white;
   color: var(--bg-accent);
-  border: 2px solid #dfe3e7;
+  border: 1px solid #dfe3e7;
   border-radius: 1em;
   margin: 0.5em 1em;
 }
@@ -1329,9 +1329,8 @@ a:hover{
   display: block; 
   height: auto; 
   background: white;
-  color: var(--bg-accent);
-  border: 2px solid #dfe3e7;
-  border-radius: 1em;
+  color: var(--bg-accent); 
+  border-radius: 1em; 
   margin: 0.5em 1em; 
   list-style-type: none;
 }
