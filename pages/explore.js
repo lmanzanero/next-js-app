@@ -7,7 +7,7 @@ import MapSideBar from '../components/explore/map/map_side_bar';
 
 export default function Explore  ({ data }) { 
     const [toggleView, setToggleView] = useState("off");
-
+    console.log(data);
     function toggleMapView() {
       //toggles map and post view
       setToggleView(toggleView === "off" ? "on" : "off");
